@@ -32,12 +32,17 @@ this command:
 
     vagrant plugin install vagrant-reload
 
-Now simply start the virtual machine for the first time, by issuing this command:
+Now simply start the virtual machine for the first time, by issuing this
+command (from ./mcell_vagrantfiles/win7):
 
     vagrant up
 
 This will take some time to complete (~15-20 minutes) the first time you run
-it, since there is a lot of provisioning to do.
+it, since there is a lot of provisioning to do. You should probably let the
+machine finish all of the provisioning before logging in. The VM will reboot a
+couple time during the provisioning. Don't be alarmed by this. Once it's done,
+you can log in to the machine by typing *vagrant* into the password field and
+hitting Enter.
 
 There are a lot of vagrant tutorials out there, so I won't repeat all of them
 here, but here are some basic commands which can be really useful:
@@ -69,7 +74,37 @@ that will be installed:
 - python 3.4
 - chocolatey
 
-Ubuntu
+### Directories
+
+Most of the things of interest are stored in C:\Users\vagrant.
+
+- MCell repo - C:\Users\vagrant\mcell
+- CellBlender repo - C:\Users\vagrant\cellblender
+- nutmeg repo - C:\Users\vagrant\nutmeg
+- Go Projects - C:\Users\vagrant\Go
+- Binaries (just MCell for now) - C:\Users\vagrant\bin
+- Shared directory with host machine - C:\vagrant
+
+### Command Line in Windows (PowerShell)
+
+You will likely want to use PowerShell when doing development/testing. To start
+PowerShell, click the circular Windows icon in the lower left hand corner, type
+powershell, and hit Enter. Once PowerShell starts, you might want to pin it to
+the taskbar (right click on icon and select "Pin this program to taskbar"), so
+it's easier to start in the future. Here are a list of some of the commands
+which can be used in PowerShell.
+
+- choco - package manager
+- vim - text editor (should probably add sublime too)
+- git
+- gcc
+- go
+- various posix-like commands
+  - ls
+  - cd
+  - mkdir
+
+Ubuntu Guest
 ---------------------------------------------------------------------------
 
 This hasn't been added yet.
