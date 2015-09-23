@@ -1,8 +1,8 @@
-Vagrant for MCell/CellBlender Developement
----------------------------------------------------------------------------
+Vagrantfiles for MCell/CellBlender Developement
+===========================================================================
 
 Windows 7 Guest
-===========================================================================
+---------------------------------------------------------------------------
 
 This vagrant project was created to be used with Vagrant 1.7 but may work with
 other versions as well.
@@ -70,6 +70,6 @@ that will be installed:
 - chocolatey
 
 Ubuntu
-===========================================================================
+---------------------------------------------------------------------------
 
 This hasn't been added yet.
