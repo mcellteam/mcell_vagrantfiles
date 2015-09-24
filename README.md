@@ -13,11 +13,12 @@ You should hopefully only have to do this once, and then you can create as many
 VMs from it as you need. The box file can be created using packer,
 packer-windows, and a Windows 7 iso.
 
-- Install packer
-- Clone packer-windows fork
-- Put Windows iso in packer-windows/iso folder
-- Change iso_url in windows_7.json to point to Windows iso location
-- packer build windows_7.json
+- Install [packer](https://packer.io)
+- Clone [packer-windows](https://github.com/jczech/packer-windows) fork or the [original version](https://github.com/joefitzgerald/packer-windows)
+- Put Windows iso in `packer-windows/iso` directory
+- Change `iso_url` in `windows_7.json` to point to Windows iso location
+- Run `packer build windows_7.json`.
+  - This will take a while, especially the defrag step.
 
 ### Add Vagrant box
 
