@@ -23,6 +23,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: "choco.exe install golang -y"
   config.vm.provision "shell", inline: "choco.exe install mingw -y"
   config.vm.provision "shell", inline: "choco.exe install cygwin -y"
+  config.vm.provision :shell, path: "scripts/InstallBabun.ps1"
   config.vm.provision :reload
   config.vm.provision :shell, path: "scripts/MCellTeam.ps1"
 
