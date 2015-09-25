@@ -48,10 +48,10 @@ hitting Enter.
 There are a lot of vagrant tutorials out there, so I won't repeat all of them
 here, but here are some basic commands which can be really useful:
 
-- vagrant suspend - Suspend the VM
-- vagrant halt - Shut down the VM
-- vagrant destroy - Destroy the VM, but leave the Vagrantfile and project files
-- vagrant ssh - This should work on Windows if the box was configured correctly
+- `vagrant suspend` - Suspend the VM
+- `vagrant halt` - Shut down the VM
+- `vagrant destroy` - Destroy the VM, but leave the Vagrantfile and project files
+- `vagrant ssh` - This should work on Windows if the box was configured correctly
 
 ### Provisions
 
@@ -95,15 +95,15 @@ the taskbar (right click on icon and select "Pin this program to taskbar"), so
 it's easier to start in the future. Here are a list of some of the commands
 which can be used in PowerShell.
 
-- choco - package manager
-- vim - text editor (should probably add sublime too)
-- git
-- gcc
-- go
+- `choco` - package manager
+- `vim` - text editor (should probably add sublime too)
+- `git`
+- `gcc`
+- `go`
 - various posix-like commands
-  - ls
-  - cd
-  - mkdir
+  - `ls`
+  - `cd`
+  - `mkdir`
 
 Ubuntu Guest
 ---------------------------------------------------------------------------
