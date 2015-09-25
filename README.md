@@ -105,6 +105,15 @@ which can be used in PowerShell.
   - `cd`
   - `mkdir`
 
+### Miscellaneous
+
+Put your .gitconfig in C:\Users\vagrant.
+
+The profile.ps1 script in C:\Users\vagrant\Documents\WindowsPowerShell is
+similar to a .bashrc/.zshrc. For example, you could use it to make changes to
+your path or add aliases. This file is executed every time you open a new
+instance of PowerShell.
+
 Ubuntu Guest
 ---------------------------------------------------------------------------
 
