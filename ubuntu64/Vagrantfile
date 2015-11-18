@@ -16,8 +16,21 @@ Vagrant.configure(2) do |config|
     sudo apt-get update
     sudo apt-get remove -y dictionaries-common
     sudo apt-get install -y dictionaries-common
-    sudo apt-get install -y xfce4 virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11 zip unzip build-essential autoconf flex bison swig python3-dev default-jdk libglu1-mesa-dev freeglut3-dev mesa-common-dev git python-pip
-    # not needed, but i find these to be useful
+    sudo apt-get install -y xfce4 virtualbox-guest-dkms virtualbox-guest-utils
+    sudo apt-get install -y virtualbox-guest-x11 
+    # For building CellBlender/MCell bundle
+    sudo apt-get install -y zip unzip build-essential
+    sudo apt-get install -y autoconf flex bison swig python3-dev default-jdk
+    sudo apt-get install -y libglu1-mesa-dev freeglut3-dev mesa-common-dev git
+    sudo apt-get install -y python-pip python-dev libfreetype6-dev pkg-config
+    # XXX: Consider doing these with a virtualenv
+    sudo pip install pyinstaller==3.0
+    sudo pip install numpy
+    sudo pip install scipy
+    sudo pip install matplotlib
+    # For tutorials
+    sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+    # Not needed, but i find these to be useful
     sudo apt-get install gnome-terminal exuberant-ctags
   SHELL
 end
