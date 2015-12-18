@@ -31,6 +31,6 @@ Vagrant.configure(2) do |config|
     # For tutorials
     sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
     # Not needed, but i find these to be useful
-    sudo apt-get install gnome-terminal exuberant-ctags
+    sudo apt-get install -y gnome-terminal exuberant-ctags
   SHELL
 end
