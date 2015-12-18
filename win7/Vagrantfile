@@ -44,5 +44,10 @@ Vagrant.configure(2) do |config|
   # For CMU users with a volume license, you might need to do follow the
   # instructions here:
   # https://www.cmu.edu/computing/software/all/windows/activate.html
+  #
+  # For Powershell4, you Microsoft .NET Framework 4.5 and Windows Management
+  # Framework 4.0 in that order. This is important for powershell scripts used
+  # in this repo: 
+  # https://github.com/mcellteam/bundle_cellblender
 
 end
