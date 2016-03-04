@@ -9,6 +9,9 @@ Ubuntu Guest
 
 Simply `cd` into `mcell_vagrantfiles/ubuntu64` and type `vagrant up`.
 
+The username and password are both `vagrant`. The desktop environment has to be
+started manually by typing `startx`.
+
 This is a pretty standard setup aside from the fact that it's not running
 headless, which is necessary for testing CellBlender. The provisioning will
 probably take about 15 minutes or so to complete. Lastly, instead of Unity,
