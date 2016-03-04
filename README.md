@@ -1,11 +1,24 @@
 Vagrantfiles for MCell/CellBlender Developement
 ===========================================================================
 
+These vagrant projects were created to be used with Vagrant 1.7 but may work with
+other versions as well.
+
+Ubuntu Guest
+---------------------------------------------------------------------------
+
+Simply `cd` into `mcell_vagrantfiles/ubuntu64` and type `vagrant up`.
+
+This is a pretty standard setup aside from the fact that it's not running
+headless, which is necessary for testing CellBlender. The provisioning will
+probably take about 15 minutes or so to complete. Lastly, instead of Unity,
+this version of Ubuntu is running xfce to keep things lightweight.
+
 Windows 7 Guest
 ---------------------------------------------------------------------------
 
-This vagrant project was created to be used with Vagrant 1.7 but may work with
-other versions as well.
+Running Windows with vagrant takes a bit more work initially, but it's fairly
+painless one you create the box.
 
 ### Create Vagrant Box
 
@@ -113,8 +126,3 @@ The profile.ps1 script in C:\Users\vagrant\Documents\WindowsPowerShell is
 similar to a .bashrc/.zshrc. For example, you could use it to make changes to
 your path or add aliases. This file is executed every time you open a new
 instance of PowerShell.
-
-Ubuntu Guest
----------------------------------------------------------------------------
-
-This hasn't been added yet.
