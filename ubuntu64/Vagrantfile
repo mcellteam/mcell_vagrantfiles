@@ -28,6 +28,7 @@ Vagrant.configure(2) do |config|
     sudo pip install numpy
     sudo pip install scipy
     sudo pip install matplotlib
+    sudo pip install python-libsbml
     # For tutorials
     sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
     # Not needed, but i find these to be useful
