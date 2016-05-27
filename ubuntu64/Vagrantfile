@@ -23,12 +23,14 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y autoconf flex bison swig python3-dev default-jdk
     sudo apt-get install -y libglu1-mesa-dev freeglut3-dev mesa-common-dev git
     sudo apt-get install -y python-pip python-dev libfreetype6-dev pkg-config
+    sudo apt-get install -y python3-pip
     # XXX: Consider doing these with a virtualenv
     sudo pip install pyinstaller==3.0
     sudo pip install numpy
     sudo pip install scipy
     sudo pip install matplotlib
     sudo pip install python-libsbml
+    sudo pip3 install numpy
     # For tutorials
     sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
     # Not needed, but i find these to be useful
