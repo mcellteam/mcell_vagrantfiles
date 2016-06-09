@@ -1,0 +1,42 @@
+---
+- name: update debian packages
+  apt: update_cache=true
+- name: install build-essential
+  apt: pkg=build-essential state=latest
+- name: install cmake
+  apt: pkg=cmake state=latest
+- name: install python-setuptools
+  apt: pkg=python-setuptools state=latest
+- name: install python3-dev
+  apt: pkg=python3-dev state=latest
+#- name: install libsbml
+#  pip: name=python-libsbml
+  sudo: yes
+- name: install swig
+  apt: pkg=swig state=latest
+- name: install python3-matplotlib
+  apt: pkg=python3-matplotlib state=latest
+- name: install flex
+  apt: pkg=flex state=latest
+- name: install bison
+  apt: pkg=bison state=latest
+- name: install default-jdk for java plotter
+  apt: pkg=default-jdk state=latest
+- name: install libglu1-mesa-dev for gl simulation runner
+  apt: pkg=libglu1-mesa-dev state=latest
+- name: install freeglut3-dev for gl simulation runner
+  apt: pkg=freeglut3-dev state=latest
+- name: install mesa-common-dev for gl simulation runner
+  apt: pkg=mesa-common-dev state=latest
+- name: install autoconf for mcell
+  apt: pkg=autoconf state=latest
+- name: remove existing cellblender bundle
+  file: path=/home/vagrant/bundle_cellblender
+        state=absent
+- name: get bundle_cellblender repo
+  git: repo=git://github.com/mcellteam/bundle_cellblender
+       dest=/home/vagrant/bundle_cellblender
+  sudo: no
+- name: generate cellblender bundle
+  shell: /home/vagrant/bundle_cellblender/ubuntu_14.04/make_cellblender.sh >> bundle_log.txt chdir=/home/vagrant/bundle_cellblender/ubuntu_14.04
+  sudo: no
