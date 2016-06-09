@@ -1,0 +1,21 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  # The official ubuntu 16.04 box isn't working properly. Sudo doesn't work
+  # because of weird hostname issues.
+  config.vm.box = "geerlingguy/ubuntu1604"
+
+  #config.vm.provider "virtualbox" do |vb|
+  #  # Display the VirtualBox GUI when booting the machine
+  #  vb.gui = true
+  #  # Customize the amount of memory on the VM:
+  #  vb.memory = "1024"
+  #end
+
+  # Ansible based provisioning
+  config.vm.provision :ansible do |ansible|
+    ansible.playbook = "./provision/playbook.yml"
+    ansible.sudo = true
+  end
+end

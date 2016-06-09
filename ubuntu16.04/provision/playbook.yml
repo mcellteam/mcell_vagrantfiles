@@ -1,0 +1,5 @@
+---
+- hosts: all
+  roles:
+  - mcell_cb_bundle
+  - general

@@ -1,0 +1,9 @@
+---
+- name: update debian packages
+  apt: update_cache=true
+- name: ensure htop is at the latest version
+  apt: pkg=htop state=latest
+- name: ensure git is at the latest version
+  apt: pkg=git state=latest
+- name: ensure zip is at the latest version
+  apt: pkg=zip state=latest
