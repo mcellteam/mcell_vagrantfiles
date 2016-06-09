@@ -7,10 +7,12 @@ other versions as well.
 Ubuntu Guest
 ---------------------------------------------------------------------------
 
-Simply `cd` into `mcell_vagrantfiles/ubuntu64` and type `vagrant up`.
+Simply `cd` into `mcell_vagrantfiles/ubuntu14.04` or
+`mcell_vagrantfiles/ubuntu16.04` and type `vagrant up`.
 
 The username and password are both `vagrant`. The desktop environment has to be
-started manually by typing `startx`.
+started manually by typing `startx`. A desktop environment hasn't been added
+for 16.04 yet.
 
 This is a pretty standard setup aside from the fact that it's not running
 headless, which is necessary for testing CellBlender. The provisioning will
