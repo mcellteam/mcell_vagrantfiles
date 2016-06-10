@@ -9,16 +9,16 @@
   apt: pkg=python-setuptools state=latest
 - name: install python3-dev
   apt: pkg=python3-dev state=latest
-#- name: install libsbml
-#  pip: name=python-libsbml
+- name: install libsbml
+  pip: name=python-libsbml
   sudo: yes
 - name: install swig
   apt: pkg=swig state=latest
 - name: install python3-matplotlib
   apt: pkg=python3-matplotlib state=latest
-- name: install flex
+- name: install flex for MCell
   apt: pkg=flex state=latest
-- name: install bison
+- name: install bison for MCell
   apt: pkg=bison state=latest
 - name: install default-jdk for java plotter
   apt: pkg=default-jdk state=latest
@@ -30,6 +30,9 @@
   apt: pkg=mesa-common-dev state=latest
 - name: install autoconf for mcell
   apt: pkg=autoconf state=latest
+
+# it would be nice to make the bundle build idempotent.
+# for now, we just blow away any existing versions just to be safe
 - name: remove existing cellblender bundle
   file: path=/home/vagrant/bundle_cellblender
         state=absent
