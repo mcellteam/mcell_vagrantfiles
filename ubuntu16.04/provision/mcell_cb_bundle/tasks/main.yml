@@ -32,6 +32,10 @@
   apt: pkg=mesa-common-dev state=latest
 - name: install autoconf for mcell
   apt: pkg=autoconf state=latest
+- name: install libfreetype6-dev for matplotlib
+  apt: pkg=libfreetype6-dev state=latest
+- name: install libxft-dev for matplotlib
+  apt: pkg=libxft-dev state=latest
 
 # it would be nice to make the bundle build idempotent.
 # for now, we just blow away any existing versions just to be safe

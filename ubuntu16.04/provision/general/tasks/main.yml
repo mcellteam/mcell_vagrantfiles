@@ -7,3 +7,11 @@
   apt: pkg=git state=latest
 - name: ensure zip is at the latest version
   apt: pkg=zip state=latest
+#- name: xfce WM
+#  apt: pkg=xfce4 state=latest
+#- name: vbox guest dkms
+#  apt: pkg=virtualbox-guest-dkms state=latest
+#- name: vbox guest utils
+#  apt: pkg=virtualbox-guest-utils state=latest
+#- name: vbox guest c11
+#  apt: pkg=virtualbox-guest-x11 state=latest
