@@ -1,6 +1,8 @@
 ---
 - name: update debian packages
   apt: update_cache=true
+- name: ensure tig is at the latest version
+  apt: pkg=tig state=latest
 - name: ensure htop is at the latest version
   apt: pkg=htop state=latest
 - name: ensure git is at the latest version
