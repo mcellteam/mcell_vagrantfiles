@@ -7,3 +7,7 @@
   apt: pkg=git state=latest
 - name: ensure zip is at the latest version
   apt: pkg=zip state=latest
+- name: ensure pip is at the latest version
+  apt: pkg=python-pip state=latest
+- name: ensure python-dev is at the latest version
+  apt: pkg=python-dev state=latest
