@@ -19,6 +19,23 @@ Vagrant.configure(2) do |config|
 
   # Enable provisioning with a shell script.
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    brew uninstall --force brew-cask
     brew update
+    brew install wget
+    brew install swig
+    brew install python3
+    pip install numpy
+    # command line dev tools installation requires user intervention
+    #brew install pyenv
+    #xcode-select --install
+    #pyenv install 3.5.2
+    #pyenv global 3.5.2
+    #pip install numpy
+    brew cask install java
+    # Not necessary, but I find these useful
+    brew install tmux
+    brew install tig
+    brew install ack
+    #chown root:wheel /usr/local
   SHELL
 end
