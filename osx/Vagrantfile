@@ -1,0 +1,46 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Note: Apple's EULA only allows OSX VMs to be run on Apple hardware.
+# The box used in this repo is described here:
+# https://github.com/AndrewDryga/vagrant-box-osx
+# and here:
+# https://atlas.hashicorp.com/AndrewDryga/boxes/vagrant-box-osx/
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "http://files.dryga.com/boxes/osx-yosemite-0.2.1.box"
+
+  config.vm.provider "virtualbox" do |vb|
+    # Display the VirtualBox GUI when booting the machine
+    vb.gui = true
+    # Customize the amount of memory on the VM:
+    vb.memory = "2048"
+  end
+
+  # Enable provisioning with a shell script.
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    brew uninstall --force brew-cask
+    brew update
+    brew install wget
+    brew install cmake
+    brew install swig
+    brew install python3
+    pip3 install numpy
+    # command line dev tools installation requires user intervention
+    #brew install pyenv
+    #xcode-select --install
+    #pyenv install 3.5.2
+    #pyenv global 3.5.2
+    #pip install numpy
+    #
+    #pyenv install 2.7.6
+    #pyenv global 2.7.6
+    #pip install python-libsbml
+    brew cask install java
+    # Not necessary, but I find these useful
+    brew install tmux
+    brew install tig
+    brew install ack
+    #chown root:wheel /usr/local
+  SHELL
+end
